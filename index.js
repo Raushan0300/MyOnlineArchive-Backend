@@ -15,6 +15,9 @@ app.get('/', (req, res)=>{
     res.send('Hello World');
 });
 
+const userRoute=require('./routes/UserRoute');
+app.use('/', userRoute);
+
 app.listen(port, ()=>{
     console.log(`Server is running at port ${port}`);
 })
