@@ -16,7 +16,9 @@ app.get('/', (req, res)=>{
 });
 
 const userRoute=require('./routes/UserRoute');
+const linksRoute=require('./routes/LinksRoute');
 app.use('/', userRoute);
+app.use('/', linksRoute);
 
 app.listen(port, ()=>{
     console.log(`Server is running at port ${port}`);
